@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  margin: 0;
+}
+
+.left_container {
+  position: relative;
+  height: 100vh;
+  width: 50%;
+  background-color: #1A598C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo_container {
+  width: 50px;
+}
+
+.logo_container img {
+  width: 100%;
+  height: 100%;
+}
+.welcome {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  line-height: normal;
+}
+
+.go_to_login {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.go_to_login span {
+  color: #1A598C;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+@media only screen and (min-width:2080px) {
+  .left_container {
+    height: 1080px;
+  }
+
+  .go_to_login {
+    font-size: 1.5rem;
+  }
+  .go_to_login span {
+
+    font-size: 1.5rem;
+
+  }
+  .welcome {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  .logo_container {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 1020px;
+  }
+
+  .left_container {
+    height: 800px;
+  }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width:688px;
+  }
+
+  .left_container {
+    display: none
+  }
+
+  .right_container {
+    height: 1031px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .l-container {
+    width:590px;
+  }
+  .l-right-container {
+    display: none
+  }
+
+  .l-left-container {
+    width: 100%;
+    height: 812px;
+
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .container {
+    width:370px;
+  }
+  .left_container {
+    display: none
+  }
+
+  .right_container {
+    width: 100%;
+    height: 812px;
+
+  }
+}

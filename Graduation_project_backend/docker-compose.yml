@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - demo-network
+    
+
+  db:
+    image: mysql
+    restart: always
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: db
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+      start_period: 5s
+      timeout: 30s
+      interval: 5s
+      retries: 5
+    ports:
+      - 3306:3306
+    networks:
+      - demo-network
+
+
+networks:
+  demo-network:
+    driver: bridge

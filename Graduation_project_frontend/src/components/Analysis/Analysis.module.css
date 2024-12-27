@@ -1,0 +1,63 @@
+AnalysisPage.css .analysisPage {
+  font-family: Inter, sans-serif;
+}
+
+h2 {
+  font-family: Inter, sans-serif;
+  color: var(--neutral-black-black-700, #333843);
+  font-weight: 400;
+  text-align: center;
+}
+
+.title {
+  color: var(--neutral-black-black-700, #333843);
+  /* Display M/Medium */
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+  /* 133.333% */
+  letter-spacing: 0.0075rem;
+}
+
+.filter {
+  text-align: right;
+  margin: 20px;
+}
+
+.filter label {
+  margin-right: 10px;
+  font-family: Inter, sans-serif;
+
+}
+
+.filter input {
+  margin-right: 20px;
+  padding: 5px;
+  font-family: Inter, sans-serif;
+}
+
+.chartContainer {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.selectSurvey {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0px;
+}
+
+.selectSurvey select {
+  height: 30px;
+  width: 300px;
+  font-family: Inter, sans-serif;
+}
+
+.selectSurvey option {
+  height: 30px;
+  width: 300px;
+  font-family: Inter, sans-serif;
+}

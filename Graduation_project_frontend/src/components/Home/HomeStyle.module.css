@@ -1,0 +1,272 @@
+.drawer_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  gap: 0.625rem;
+}
+
+.derawer_item {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.00438rem;
+}
+
+
+.active_derawer_item {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.00438rem;
+}
+
+.active_derawer_button {
+  border-radius: 0.5rem;
+  background: #1A598C;
+  display: flex;
+  width: 14.25rem;
+  height: 2.5rem;
+  gap: 0.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.nonactive_derawer_button {
+  border-radius: 0.5rem;
+  background: #fff;
+  display: flex;
+  width: 14.25rem;
+  height: 2.5rem;
+  gap: 0.5rem;
+  margin-bottom: 0.625rem;
+
+}
+
+
+
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 250px;
+  margin-top: 2rem;
+
+
+}
+
+.logo_container img {
+  width: 40%;
+  height: 80%;
+}
+
+.avatar_and_name {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.avatar_contanir1 {
+  width: 2.375rem;
+  height: 2.375rem;
+  margin-right: 8px;
+}
+
+.avatar_contanir1 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.prof_name1 {
+  color: var(--neutral-black-black-800, #1A1C21);
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.00438rem;
+}
+
+.prof_specialty1 {
+  color: var(--neutral-black-black-500, #667085);
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.125rem;
+  letter-spacing: 0.00375rem;
+}
+
+.name_and_edit {
+  display: flex;
+}
+
+.prof_info {
+  display: flex;
+  align-items: center;
+}
+
+.image_container {
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-right: 15px;
+
+}
+
+.image_container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.prof_name {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.0075rem;
+  margin-right: 0.8125rem;
+  margin-bottom: 0.31rem;
+}
+
+.prof_work {
+  color: #667085;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.00438rem;
+  margin-bottom: 0.31rem;
+}
+
+.prof_specialty {
+  color: #4A80AA;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.00438rem;
+}
+
+.add_and_change_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.25rem 0;
+}
+
+.project_or_research {
+  display: flex;
+  transform: rotate(0.533deg);
+  padding: 0.25rem;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  border: 1px solid var(--neutral-gray-gray-100, #E0E2E7);
+  background: var(--neutral-white, #FFF);
+}
+
+.active_button {
+  display: flex;
+  padding: 0.375rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  background: var(--primary-primary-100, #DEDEFA);
+  color: #1A598C;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: 0.00438rem;
+  cursor: pointer;
+}
+
+.change_button {
+  display: flex;
+  padding: 0.375rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--neutral-black-black-500, #667085);
+  /* Text M/Medium */
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.00438rem;
+  cursor: pointer;
+}
+
+.change_button:hover {
+  background-color: #DEDEFA;
+}
+
+.add_button {
+  display: flex;
+  padding: 0.625rem 0.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  background: #1A598C;
+  cursor: pointer;
+
+}
+
+.add_button div {
+  color: var(--neutral-white, #FFF);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.00438rem;
+
+}
+
+.log_out {
+  color: #FE0000;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.00438rem;
+  display: flex;
+  align-items: center;
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  position: absolute;
+  bottom: 5px;
+  cursor: pointer;
+  margin-left: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.edit {
+  cursor: pointer;
+
+}

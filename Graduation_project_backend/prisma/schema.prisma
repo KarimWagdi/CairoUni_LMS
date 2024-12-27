@@ -1,0 +1,190 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Professor {
+  id                  Int                   @id @default(autoincrement())
+  fullName            String
+  role                String                @default("user")
+  email               String                @unique
+  password            String
+  specialty           String?
+  phoneNumber         String?
+  image               String?
+  token               String?
+  resetToken          String?
+  resetTokenExpiry    BigInt?
+  createdAt           DateTime              @default(now())
+  departmentId        Int
+  department          Department            @relation("ProfessorDepartment", fields: [departmentId], references: [id])
+  professorAttachment Professor_attachment? @relation("HasAttachment")
+  ProfessorResearchs  Research[]            @relation("Research")
+  Projects            Project[]             @relation("Project")
+  Positions           Professor_Positions[] @relation("PositionsProfessor")
+  responses           Response[]
+  professorAwards     Professor_Awards[]    @relation("AwardedTo")
+  userSurvey          userSurvey[]
+}
+
+model Professor_attachment {
+  id               Int       @id @default(autoincrement())
+  ssn              Int
+  degreeDate       Int
+  degreeUniversity String
+  gender           Gender
+  degree           Degree
+  professorId      Int       @unique
+  professor        Professor @relation("HasAttachment", fields: [professorId], references: [id])
+}
+
+model Research {
+  id                Int            @id @default(autoincrement())
+  title             String
+  description       String
+  startDate         String
+  endDate           String
+  status            String
+  createdBy         String
+  pagesNumber       Int
+  publisher         String
+  magazineName      String
+  magazineVolume    String
+  publishYear       Int
+  majoring          String
+  ProfessorRole     Professor_role
+  type              Type
+  masterStudentCode Int?
+  departmentId      Int
+  department        Department     @relation("ResearchDepartment", fields: [departmentId], references: [id])
+
+  // masterStudentId Int?
+  // masterStudent   Student?       @relation("ResearchStudent", fields: [masterStudentId], references: [studentId])
+  professor   Professor @relation("Research", fields: [professorId], references: [id])
+  professorId Int
+}
+
+model Project {
+  projectId     Int            @id @default(autoincrement())
+  projectName   String
+  description   String
+  topic         String
+  startDate     String
+  endDate       String
+  status        String
+  createdBy     String
+  affiliate     String
+  type          Type
+  ProfessorRole Professor_role
+  departmentId  Int
+  department    Department     @relation("ProjectDepartment", fields: [departmentId], references: [id])
+  professor     Professor      @relation("Project", fields: [professorId], references: [id])
+  professorId   Int
+}
+
+// model Student {
+//   studentId       Int        @id @default(autoincrement())
+//   studentName     String
+//   studentCode     Int
+//   StudentResearch Research[] @relation("ResearchStudent")
+// }
+
+model Professor_Positions {
+  positionId  Int           @id @default(autoincrement())
+  name        String
+  type        Position_Type
+  startDate   String
+  endDate     String
+  professorId Int
+  professor   Professor     @relation("PositionsProfessor", fields: [professorId], references: [id])
+}
+
+model Professor_Awards {
+  awardId     Int       @id @default(autoincrement())
+  name        String
+  date        String
+  field       String
+  professorId Int
+  professor   Professor @relation("AwardedTo", fields: [professorId], references: [id])
+}
+
+model Department {
+  id                  Int         @id @default(autoincrement())
+  name                String
+  ProfessorDepartment Professor[] @relation("ProfessorDepartment")
+  ResearchDepartment  Research[]  @relation("ResearchDepartment")
+  ProjectDepartment   Project[]   @relation("ProjectDepartment")
+}
+
+model Survey {
+  id         Int          @id @default(autoincrement())
+  name       String
+  questions  Question[]
+  userSurvey userSurvey[]
+}
+
+model userSurvey {
+  id          Int       @id @default(autoincrement())
+  survey      Survey    @relation(fields: [surveyId], references: [id])
+  surveyId    Int
+  user        Professor @relation(fields: [professorId], references: [id])
+  professorId Int
+  complete    Boolean   @default(false)
+}
+
+model Question {
+  id       Int      @id @default(autoincrement())
+  text     String
+  answers  Answer[]
+  survey   Survey   @relation(fields: [surveyId], references: [id])
+  surveyId Int
+}
+
+model Answer {
+  id         Int        @id @default(autoincrement())
+  text       String
+  question   Question   @relation(fields: [questionId], references: [id])
+  questionId Int
+  responses  Response[]
+}
+
+model Response {
+  id          Int       @id @default(autoincrement())
+  answer      Answer    @relation(fields: [answerId], references: [id])
+  answerId    Int
+  Professor   Professor @relation(fields: [professorId], references: [id])
+  professorId Int
+}
+
+enum Type {
+  Master
+  GraduationProject
+  ProfessorResearch
+  ProfessorProject
+}
+
+enum Position_Type {
+  Internal_position
+  External_position
+}
+
+enum Professor_role {
+  author
+  supervisor
+}
+
+enum Degree {
+  Assistant
+  Associate
+  Full
+  Emeritus
+}
+
+enum Gender {
+  Male
+  Female
+}

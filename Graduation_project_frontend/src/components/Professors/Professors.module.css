@@ -1,0 +1,38 @@
+.title {
+  color: var(--neutral-black-black-700, #333843);
+  /* Display M/Medium */
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+  /* 133.333% */
+  letter-spacing: 0.0075rem;
+}
+
+.search_container {
+  margin: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.Filters_btn {
+  display: flex;
+  padding: 0.625rem 0.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Neutral-Gray-Gray-100, #E0E2E7);
+  background: var(--Neutral-White, #FFF);
+  color: var(--Neutral-Black-Black-500, #667085);
+
+  /* Text M/Medium */
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.00438rem;
+}

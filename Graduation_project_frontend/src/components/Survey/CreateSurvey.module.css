@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 20px;
+}
+.title {
+  color: var(--neutral-black-black-800, #1A1C21);
+  /* Display XS/Medium */
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.75rem;
+  /* 155.556% */
+  letter-spacing: 0.00563rem;
+  margin-bottom: 20px;
+}
+
+.form_container {
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-self: stretch;
+  width: 800px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--neutral-gray-gray-100, #E0E2E7);
+  background: var(--neutral-white, #FFF);
+  /* Hard Shadow */
+  box-shadow: 0px 1.5px 2px 0px rgba(16, 24, 40, 0.10);
+  overflow: scroll;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+.label {
+  color: var(--neutral-black-black-600, #4D5464);
+  /* Text M/Medium */
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.00438rem;
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  gap: 0.25rem;
+  margin: 5px;
+  font-family: Inter;
+  align-self: stretch;
+  border-radius: 0.5rem;
+  border: 1px solid var(--neutral-gray-gray-100, #E0E2E7);
+  background: var(--neutral-gray-gray-25, #F9F9FC);
+}
+.btns_container {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+.cancel_btn {
+  display: flex;
+  padding: 0.625rem 0.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  width: 8.5rem;
+  color: #858D9D;
+  border: 1px solid var(--neutral-gray-gray-400, #858D9D);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.00438rem;
+  cursor: pointer;
+  width: 200px;
+  margin-right: 50px;
+
+}
+
+.save_btn {
+  display: flex;
+  padding: 0.625rem 0.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  border: 0;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: white;
+  width: 200px;
+  cursor: pointer;
+  background: var(--primary-primary-500, #5C59E8);
+}

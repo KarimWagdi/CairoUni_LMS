@@ -1,0 +1,107 @@
+.download_bt {
+  display: flex;
+  padding: 0.625rem 0.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  background: #DEDEFA;
+  width: 8.125rem;
+  height: 2.5rem;
+  color: #5C59E8;
+  text-decoration: none;
+  /* Text M/Semibold */
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.00438rem;
+  margin-bottom: 1.56rem;
+  cursor: pointer;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact, .social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.profile, .education, .experience, .projects {
+  margin-bottom: 20px;
+}
+
+.profile h3, .education h3, .experience h3, .projects h3 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-family: Poppins;
+}
+.section h3 {
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #424242;
+}
+
+.sectionContent h4 {
+  margin: 10px 0 5px 0;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 12.1px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #424242;
+
+}
+
+.sectionContent p {
+  margin: 5px 0;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  text-align: left;
+
+}
+
+.job, .project {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+} */
